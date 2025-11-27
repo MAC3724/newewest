@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Celebrate Life’s Beautiful Moments</title>
 
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
   <style>
+    /* Reset default styles */
     * {
       margin: 0;
       padding: 0;
@@ -25,11 +23,12 @@
       text-align: center;
       font-family: "Georgia", serif;
       color: white;
-      background: url("Background1.jpg") no-repeat center center/cover;
+      background: url("background.jpg") no-repeat center center/cover;
       position: relative;
       overflow: hidden;
     }
 
+    /* Subtle dark overlay for readability */
     body::before {
       content: "";
       position: absolute;
@@ -80,60 +79,7 @@
       transform: scale(1.05);
     }
 
-    /* Countdown Styles */
-    #countdown {
-      margin-top: 25px;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      z-index: 1;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 30px;
-      padding: 10px 20px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      display: inline-block;
-    }
-
-    #countdown span {
-      display: inline-block;
-      min-width: 60px;
-    }
-
-    /* Event Info Section */
-    .event-info {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 60px;
-      z-index: 1;
-      flex-wrap: wrap;
-    }
-
-    .info-box {
-      text-align: center;
-    }
-
-    .info-box i {
-      font-size: 2rem;
-      color: #d6a43b;
-      margin-bottom: 10px;
-    }
-
-    .info-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    .info-detail {
-      font-size: 0.95rem;
-      color: #f5e7c5;
-      margin-top: 4px;
-    }
-
-    /* Responsive */
+    /* Responsive Design */
     @media (max-width: 768px) {
       h1 {
         font-size: 2.1rem;
@@ -146,14 +92,6 @@
       .button {
         padding: 12px 28px;
         font-size: 0.95rem;
-      }
-
-      #countdown {
-        font-size: 0.95rem;
-      }
-
-      .event-info {
-        gap: 35px;
       }
     }
 
@@ -170,84 +108,12 @@
         padding: 10px 25px;
         font-size: 0.9rem;
       }
-
-      #countdown {
-        font-size: 0.9rem;
-      }
-
-      .info-title {
-        font-size: 1rem;
-      }
-
-      .info-detail {
-        font-size: 0.85rem;
-      }
     }
   </style>
 </head>
 <body>
   <h1>Celebrate Life’s Beautiful Moments</h1>
   <p>Join us for an evening filled with joy, laughter, and warm memories.</p>
-  <p>    </p
-  
-  <p>Take a moment to check out the "View Party Highlights" below for all the exciting details, and don’t forget to RSVP!.</p>
-  <a href="https://hosawertyuop.life/kajdkloity" class="button">View Party Highlights</a>
-
-  <!-- Countdown Timer -->
-  <div id="countdown"></div>
-
-  <!-- Event Info Section -->
-  <div class="event-info">
-    <div class="info-box">
-      <i class="fa-solid fa-calendar-days"></i>
-      <div class="info-title">When</div>
-      <div class="info-detail">December 15, 2025</div>
-    </div>
-
-    <div class="info-box">
-      <i class="fa-solid fa-location-dot"></i>
-      <div class="info-title">Where</div>
-      <div class="info-detail">TBD</div>
-    </div>
-
-    <div class="info-box">
-      <i class="fa-solid fa-clock"></i>
-      <div class="info-title">Time</div>
-      <div class="info-detail">00:00 EST</div>
-    </div>
-  </div>
-
-  <script>
-    // 🎯 Set your event date here:
-    const eventDate = new Date("2025-12-25T00:00:00").getTime();
-
-    const countdown = document.getElementById("countdown");
-
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
-
-      if (distance < 0) {
-        countdown.innerHTML = "The event has started!";
-        clearInterval(timer);
-        return;
-      }
-
-      // Time calculations
-      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.4375));
-      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.4375)) / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `
-        <span>${months} <small>mo</small></span>
-        <span>${days} <small>d</small></span>
-        <span>${hours} <small>h</small></span>
-        <span>${minutes} <small>m</small></span>
-        <span>${seconds} <small>s</small></span>
-      `;
-    }, 1000);
-  </script>
+  <a href="https://partypinginvite.de/rsvpcard/mobile&desktop.php" class="button">RSVP NOW</a>
 </body>
 </html>
